@@ -1,0 +1,9 @@
+8c496e5a4f83125c2465aa5d1d65a862 *DESCRIPTION
+0607f29b3bfcc63cd621f3fe02ea2e92 *NAMESPACE
+097ecadf2cfe632e8cfa4741e46d8edb *R/SpatialGridR.R
+28756d738b3b58f803cd789e1440293d *build/vignette.rds
+31276d69de5875d6b06f22856fa41c87 *inst/doc/SpatGRID.R
+abfa9fd9dd4cab776c5668f739d152ac *inst/doc/SpatGRID.Rmd
+0000695a52e5aea7a81dd629fa4df592 *inst/doc/SpatGRID.html
+4a3e6d5c2fe50b6fb97c7d422f86a7b2 *man/SpatialGridR.Rd
+abfa9fd9dd4cab776c5668f739d152ac *vignettes/SpatGRID.Rmd

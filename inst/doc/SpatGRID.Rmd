@@ -1,0 +1,62 @@
+---
+title: "SpatGRID:Spatial Grid Generation from Longitude and Latitude List"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{SpatGRID:Spatial Grid Generation from Longitude and Latitude List}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Introduction
+****<br/>
+*The developed function can be used to create spatial grids using user-specified latitude and longitude coordinates. To make sure the input longitude and latitude values are within the proper geographic ranges, the function first verifies their validity. The appropriate Universal Transverse Mercator (UTM) zone is then identified using the provided hemisphere and longitude values, after which a polygon is constructed from the coordinates. Subsequently, transform the input shapefile to the UTM projection when necessary. Finally, a spatial grid is generated with the specified interval and saved as a shapefile.The function takes into account crucial parameters such as the hemisphere (north or south), desired grid interval, and the output shapefile path. The developed function is an efficient tool, simplifying the process of empty spatial grid generation for applications such as, geostatistical analysis, digital soil mapping product generation, etc.*
+
+****<br/>
+
+``` {r}
+## **Installation and loading the library of SpatGRID R package**
+# You can install the SpatGRID package from CRAN using the following command:
+# install.packages("SpatialGRID")
+# Once installed, you can load the package using
+  # library(SpatGRID)
+## Data Input
+
+# The first step is to prepare the data. The function `SpatialGridR` requires two lists:
+# lon_list` - a list of longitudes, and `lat_list` - a list of latitudes.
+# Ensure that your longitude values are within the range of -180 to +180, and latitude values are within the range of -90 to +90.
+
+# Example:
+# lon_list<-c(78,78,79,79,78)
+# lat_list<-c(20,21,21,20,20)
+
+## Setting Parameters for Generating Spatial Grid
+# The `SpatialGridR` function requires several parameters:
+# - `hemisphere`: Specify either 'north' or 'south'.
+# - `outputShape`: Provide the path to the output shapefile.
+# - `interval`: Define the desired interval for the grid in meters.
+
+# Example:
+#  hemisphere <- 'north'
+#  outputShape <- 'C:\\path\\to\\your\\data\\grid.shp'
+#  interval <- 1000
+
+## Creating the Spatial Grid:
+# Now, let's use the `SpatialGridR` function to generate the spatial grid of desired size
+ 
+# Spatial_GRID <- SpatialGridR(lon_list, lat_list, hemisphere, interval, outputShape)
+
+## Load the grid shapefile
+# library(raster)
+# library(SpatGRID)
+# sample_grid<- shapefile("D:\\grid.shp")
+
+## Plot the GRID
+# plot(sample_grid, main = "Spatial GRID", col = "darkblue")
+
+```
+
+
+
+
+
+
